@@ -1,11 +1,15 @@
 package test;
 
+import org.junit.Assert;
 import org.junit.Test;
+
+import cuentaBancaria.Cuenta;
 
 public class CuentasTest {
 	
 		@Test
-		public void TrasnferirA(Cuenta otra){
-			this.monto += otra.monto;
+		public void AbreCuenta(){
+			Cuenta account = new Cuenta();
+			Assert.assertTrue(account.Estado() == 0);
 		}
 }

@@ -28,8 +28,18 @@ public class CuentasTest {
 		Cuenta cuentaA = new Cuenta();
 		Cuenta cuentaB = new Cuenta();
 		cuentaA.SumarMonto(100);
-		cuentaA.TransferirMontoA(100,cuentaB);
+		cuentaA.TransferirMontoA(100, cuentaB);
 		Assert.assertTrue(cuentaB.Estado() == 100 && cuentaA.Estado() == 0);
+	}
+
+	@Test
+	// Verifica que si quiero transferir mas del monto que posee una cuenta no opera
+	public void TransferirMasDelCapital() { 
+		Cuenta cuentaA = new Cuenta();
+		Cuenta cuentaB = new Cuenta();
+		cuentaA.SumarMonto(100);
+		cuentaA.TransferirMontoA(400, cuentaB);
+		Assert.assertTrue(cuentaB.Estado() == 400 && cuentaA.Estado() == 0);
 	}
 
 }

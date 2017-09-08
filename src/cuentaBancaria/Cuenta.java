@@ -20,6 +20,9 @@ public class Cuenta {
 			this.monto -= monto;
 			otra.monto += monto;
 		}
+	}
 
+	public void VaciarCuenta() {
+		this.monto = 0;
 	}
 }

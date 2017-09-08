@@ -7,5 +7,5 @@
 
 ## Estudiantes
 
-* XXX ([xxx](https://github.com/xxx))
-* XXX ([xxx](https://github.com/xxx))
+* Agustin Magliano ([agusmag](https://github.com/agusmag))
+* Fernando Queirolo ([fernandoq96](https://github.com/fernandoq96))

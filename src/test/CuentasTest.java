@@ -33,13 +33,22 @@ public class CuentasTest {
 	}
 
 	@Test
-	// Verifica que si quiero transferir mas del monto que posee una cuenta no opera
-	public void TransferirMasDelCapital() { 
+	// Verifica que si quiero transferir mas del monto que posee una cuenta no
+	// opera
+	public void TransferirMasDelCapital() {
 		Cuenta cuentaA = new Cuenta();
 		Cuenta cuentaB = new Cuenta();
 		cuentaA.SumarMonto(100);
 		cuentaA.TransferirMontoA(400, cuentaB);
 		Assert.assertTrue(cuentaB.Estado() == 0 && cuentaA.Estado() == 100);
+	}
+
+	@Test
+	public void VaciarCuenta() { // Verifica que si vacio una cuenta, ponga su monto en 0
+		Cuenta cuentaA = new Cuenta();
+		cuentaA.SumarMonto(1500);
+		cuentaA.VaciarCuenta();
+		Assert.assertTrue(cuentaA.Estado() == 0);
 	}
 
 }

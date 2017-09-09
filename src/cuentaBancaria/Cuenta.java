@@ -12,13 +12,16 @@ public class Cuenta {
 	}
 
 	public void ingresarMonto(double monto) {
-		this.monto += monto;
+		if (monto > 0)
+			this.monto += monto;
 	}
 
 	public void transferirMontoA(double monto, Cuenta otra) {
-		if (this.monto >= monto) {
-			this.monto -= monto;
-			otra.monto += monto;
+		if (monto > 0) {
+			if (this.monto >= monto) {
+				this.monto -= monto;
+				otra.monto += monto;
+			}
 		}
 	}
 
@@ -32,8 +35,10 @@ public class Cuenta {
 	}
 
 	public void extraerMonto(double monto) {
-		if (this.monto > 0) {
-			this.monto -= monto;
+		if (monto > 0) {
+			if (this.monto > 0) {
+				this.monto -= monto;
+			}
 		}
 	}
 }

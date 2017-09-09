@@ -53,12 +53,13 @@ public class CuentasTest {
 	}
 
 	@Test
+	//Verifica que se fusionen 2 cuentas(una se le incrementa el monto, la otra queda en 0)
 	public void fusionarCuentas() {
 		Cuenta cuentaA = new Cuenta();
 		Cuenta cuentaB = new Cuenta();
 		cuentaA.ingresarMonto(250);
 		cuentaB.ingresarMonto(310);
 		cuentaA.FusionarCon(cuentaB);
-		Assert.assertTrue(cuentaA.saldoDeCuenta() == 560);
+		Assert.assertTrue(cuentaA.saldoDeCuenta() == 560 && cuentaB.saldoDeCuenta() == 0);
 	}
 }

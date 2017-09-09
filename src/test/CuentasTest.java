@@ -44,11 +44,21 @@ public class CuentasTest {
 	}
 
 	@Test
-	public void vaciarCuenta() { // Verifica que si vacio una cuenta, ponga su monto en 0
+	public void vaciarCuenta() { // Verifica que si vacio una cuenta, ponga su
+									// monto en 0
 		Cuenta cuentaA = new Cuenta();
 		cuentaA.ingresarMonto(1500);
 		cuentaA.vaciarCuenta();
 		Assert.assertTrue(cuentaA.saldoDeCuenta() == 0);
 	}
 
+	@Test
+	public void fusionarCuentas() {
+		Cuenta cuentaA = new Cuenta();
+		Cuenta cuentaB = new Cuenta();
+		cuentaA.ingresarMonto(250);
+		cuentaB.ingresarMonto(310);
+		FusionarCuentas(cuentaA, cuentaA, cuentaB);
+		Assert.assertTrue(cuentaA.saldoDeCuenta() == 560);
+	}
 }

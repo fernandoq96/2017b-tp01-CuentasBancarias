@@ -69,7 +69,7 @@ public class CuentasTest {
 	public void restarMonto() {
 		Cuenta cuentaA = new Cuenta();
 		cuentaA.ingresarMonto(100);
-		cuentaA.extraerMonto(50);
-		Assert.assertTrue(cuentaA.saldoDeCuenta() == 50);
+		cuentaA.extraerMonto(150);
+		Assert.assertTrue(cuentaA.saldoDeCuenta() == -50);
 	}
 }

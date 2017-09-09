@@ -32,6 +32,8 @@ public class Cuenta {
 	}
 
 	public void extraerMonto(double monto) {
-		this.monto -= monto;
+		if (this.monto > 0) {
+			this.monto -= monto;
+		}
 	}
 }

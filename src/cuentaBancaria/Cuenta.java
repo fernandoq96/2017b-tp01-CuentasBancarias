@@ -30,4 +30,8 @@ public class Cuenta {
 		this.monto += B.monto;
 		B.monto = 0;
 	}
+
+	public void extraerMonto(double monto) {
+		this.monto -= monto;
+	}
 }

@@ -58,7 +58,7 @@ public class CuentasTest {
 		Cuenta cuentaB = new Cuenta();
 		cuentaA.ingresarMonto(250);
 		cuentaB.ingresarMonto(310);
-		FusionarCuentas(cuentaA, cuentaA, cuentaB);
+		cuentaA.FusionarCon(cuentaB);
 		Assert.assertTrue(cuentaA.saldoDeCuenta() == 560);
 	}
 }

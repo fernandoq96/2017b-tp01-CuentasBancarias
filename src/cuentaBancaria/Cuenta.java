@@ -1,6 +1,5 @@
 package cuentaBancaria;
 
-
 public class Cuenta {
 	private double monto;
 
@@ -15,7 +14,7 @@ public class Cuenta {
 	public void ingresarMonto(double monto) {
 		this.monto += monto;
 	}
-	
+
 	public void transferirMontoA(double monto, Cuenta otra) {
 		if (this.monto >= monto) {
 			this.monto -= monto;
@@ -25,5 +24,9 @@ public class Cuenta {
 
 	public void vaciarCuenta() {
 		this.monto = 0;
+	}
+
+	public void FusionarCon(Cuenta B) {
+		this.monto += B.monto;
 	}
 }

@@ -72,4 +72,15 @@ public class CuentasTest {
 		cuentaA.extraerMonto(150);
 		Assert.assertTrue(cuentaA.saldoDeCuenta() == -50);
 	}
+
+	@Test
+	public void EstadoDeLaCuenta() { // Verifica que indique si la cuenta esta
+										// con
+										// Saldo positivo o Negativo
+		Cuenta cuentaA = new Cuenta();
+		Cuenta cuentaB = new Cuenta();
+		cuentaA.ingresarMonto(150);
+		cuentaB.extraerMonto(100);
+		Assert.assertTrue(cuentaA.Estado() == "Positivo" && cuentaB.Estado() == "Negativo");
+	}
 }

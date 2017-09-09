@@ -80,6 +80,7 @@ public class CuentasTest {
 		Cuenta cuentaA = new Cuenta();
 		Cuenta cuentaB = new Cuenta();
 		cuentaA.ingresarMonto(150);
+		cuentaB.ingresarMonto(50);
 		cuentaB.extraerMonto(100);
 		Assert.assertTrue(cuentaA.Estado() == "Positivo" && cuentaB.Estado() == "Negativo");
 	}

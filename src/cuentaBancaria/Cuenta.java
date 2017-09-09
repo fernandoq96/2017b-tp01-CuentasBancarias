@@ -41,4 +41,15 @@ public class Cuenta {
 			}
 		}
 	}
+
+	public String Estado() {
+		String estado;
+		if (this.monto >= 0) {
+			estado = "Positivo";
+		} else {
+			estado = "Negativo";
+		}
+
+		return estado;
+	}
 }

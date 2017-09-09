@@ -1,5 +1,6 @@
 package cuentaBancaria;
 
+
 public class Cuenta {
 	private double monto;
 
@@ -7,22 +8,22 @@ public class Cuenta {
 		this.monto = 0;
 	}
 
-	public double Estado() {
+	public double saldoDeCuenta() {
 		return this.monto;
 	}
 
-	public void SumarMonto(double monto) {
+	public void ingresarMonto(double monto) {
 		this.monto += monto;
 	}
-
-	public void TransferirMontoA(double monto, Cuenta otra) {
+	
+	public void transferirMontoA(double monto, Cuenta otra) {
 		if (this.monto >= monto) {
 			this.monto -= monto;
 			otra.monto += monto;
 		}
 	}
 
-	public void VaciarCuenta() {
+	public void vaciarCuenta() {
 		this.monto = 0;
 	}
 }
